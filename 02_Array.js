@@ -7,7 +7,7 @@ const Yourarray = ["A", "d", [32, 44, 1], false]
 const YourFlattedarray = Yourarray.flat;
 console.log(Yourarray);
 
-
+// Using Spread Operator
 const OurArray = [...Myarray, ...Yourarray];
 
 console.log(OurArray);
