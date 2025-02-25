@@ -27,4 +27,18 @@ console.log(isloggedin.valueOf());
 console.log(typeof undefined);
 console.log(typeof null);
 
+let score = "45"
+// let score = "45abc"
+// let score = null
+// let score = undefined
+// let score = true
+
+console.log(typeof score);
+
+let valueInNumber = Number(score)
+
+console.log(typeof valueInNumber);
+
+console.log(chkvalueInNumber);
+
 
