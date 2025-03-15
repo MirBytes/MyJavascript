@@ -138,3 +138,32 @@ const addthirty = (num1, num2) => (num1 + num2 + 30)
 // This will not work. As we'll have to add braces to print this object. So, we use this good practice and use braces.
 const objectnameprinter = () => ({ name: "macha" })
 console.log(objectnameprinter());
+
+// Immediately Invoked Function Expressions (IIFE)
+// IIFE is a function that is called immediately after it is defined. It is a function that
+// is defined and called in the same statement. It is used to create a scope for the
+// variables and functions that are defined inside it. It is also used to prevent the
+// global namespace from being polluted with variables and functions that are only
+// needed inside the IIFE.
+
+// Simple Funtion
+// function database() {
+//     console.log(`DB Connected`);
+// }
+
+// database()
+
+(function database() {
+    console.log(`DB Connected`);
+})();
+// Their should be semi-final after iife funtions
+
+(() => {
+    console.log(`DB connected Again`);
+
+})();
+
+((name) => {
+    console.log(`DB connected Again ${name}`);
+
+})("Mir")
