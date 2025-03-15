@@ -65,10 +65,76 @@ function addthree(value) {
 }
 
 // But in Expression, You can't
-addfive(7)
-const addfive = function (num) {
-    return num + 5
-}
+// addfive(7)
+// const addfive = function (num) {
+//     return num + 5
+// }
 
 
 // This And Arrow Functions
+const user = {
+    name: "Bajwa",
+    price: 999,
+
+    // So, this refers to current context of the object
+    welcomeMessage: function () {
+        console.log(`${this.name}, Welcome to Website`);
+        // console.log(this);
+    }
+}
+
+// user.welcomeMessage()
+// user.name = "Ibrahim"
+// user.welcomeMessage()
+
+console.log(this)
+// In node enviroment current context is empty but in browser when you console log this. You'll not get empty objects.
+// You'll get window object
+// console.log(this);
+
+function chai() {
+    let username = 'Mir'
+    console.log(this);
+    console.log(this.username);
+}
+
+// const chai = function () {
+//     let username = 'Mir'
+//     console.log(this);
+//     console.log(this.username);
+// }
+
+chai()
+// In browser you'll get window object
+// In Node.js you'll get empty object
+// When called inside funtion you'll get too much content. This only works with objects for now how much we have learnt asw username will be undefined as its given some value above.
+
+const chaiArrow = () => {
+    let username = "MIR"
+    console.log(this);
+    console.log(this.username);
+}
+
+chaiArrow()
+
+const addten = (num1, num2) => {
+    return num1 + num2 + 10
+}
+
+console.log(addten(5, 6));
+
+// implicit return 
+const addtwenty = (num1, num2) => num1 + num2 + 20
+
+// one more method
+const addthirty = (num1, num2) => (num1 + num2 + 30)
+
+// So, When using Brackets don't use return but when Curly Braces then you will have to use return to return some value
+// If you don't use return then it will return undefined. So, use return when you are
+// using Curly Braces and don't use return when you are using Brackets.
+
+// So, let's say we have to return an object now but using implicit return without braces
+// const objectnameprinter = () => { name: "macha" }
+// This will not work. As we'll have to add braces to print this object. So, we use this good practice and use braces.
+const objectnameprinter = () => ({ name: "macha" })
+console.log(objectnameprinter());
